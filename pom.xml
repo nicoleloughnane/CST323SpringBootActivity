@@ -14,7 +14,7 @@
 	<name>topic4-4</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -68,7 +68,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>cst339topic4-4</finalName>
+		<finalName>cst323activity</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
