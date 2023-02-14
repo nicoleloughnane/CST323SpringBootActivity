@@ -13,6 +13,7 @@ public class OrderList {
 	//getters and setters
 	@XmlElement(name="order")
 	public List<OrderModel> getOrders() {
+		System.out.println("orders: " + this.orders);
 		return this.orders;
 	}
 	
