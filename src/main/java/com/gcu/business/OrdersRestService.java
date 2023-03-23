@@ -20,7 +20,6 @@ public class OrdersRestService {
 	
 	@GetMapping(path="/getjson", produces= {MediaType.APPLICATION_JSON_VALUE})
 	public List<OrderModel> getOrdersAsJson() {
-		
 		return service.getOrders();
 	}
 	
