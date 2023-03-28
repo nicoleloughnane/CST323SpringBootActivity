@@ -13,11 +13,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.gcu.Topic44Application;
 import com.gcu.business.OrdersBusinessInterface;
 import com.gcu.business.SecurityBusinessService;
 import com.gcu.model.LoginModel;
 import com.gcu.model.OrderModel;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 @RequestMapping("/login")
 public class LoginController {
@@ -37,6 +41,7 @@ public class LoginController {
 	}
 	@PostMapping("/doLogin")
 	public String doLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model) {
+		log.info("entering the doLogin method in the controller");
 		//print out values of form
 		//System.out.println(String.format("Form with username of %s and password of %s", loginModel.getUsername(), loginModel.getPassword()));
 		//check for validation errors

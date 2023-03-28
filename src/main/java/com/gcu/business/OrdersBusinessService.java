@@ -5,10 +5,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.gcu.controller.LoginController;
 import com.gcu.data.entity.OrderEntity;
 import com.gcu.data2.OrderDataService;
 import com.gcu.model.OrderModel;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class OrdersBusinessService implements OrdersBusinessInterface{
 
 	@Autowired
@@ -29,6 +33,7 @@ public class OrdersBusinessService implements OrdersBusinessInterface{
 		orders.add(new OrderModel(3L, "0000000004", "Product 4", 4.00f, 4));
 		orders.add(new OrderModel(4L, "0000000005", "Product 5", 5.00f, 5));
 		return orders; */
+		log.info("entering the getOrders method in ordersbusinessservice");
 		List <OrderEntity> ordersEntity = service.findAll();
 		
 		List<OrderModel> ordersDomain = new ArrayList<OrderModel>();
